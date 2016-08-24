@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCE6C08A-B790-4994-AA0A-F7686E424D4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RH.HeadShop</RootNamespace>
+    <AssemblyName>RH.HeadShop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Project1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RH.AssimpNet, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\RH.AssimpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RH.ImageListView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\RH.ImageListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ctrlAngleSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlAngleSelector.designer.cs">
+      <DependentUpon>ctrlAngleSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlNewPart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlNewPart.designer.cs">
+      <DependentUpon>ctrlNewPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmControlBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmControlBox.designer.cs">
+      <DependentUpon>frmControlBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmNewProject1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmNewProject1.designer.cs">
+      <DependentUpon>frmNewProject1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmNewProject2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmNewProject2.designer.cs">
+      <DependentUpon>frmNewProject2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmSplash.designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmAccessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmAccessories.designer.cs">
+      <DependentUpon>frmAccessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmFreeHand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmFreeHand.Designer.cs">
+      <DependentUpon>frmFreeHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmMaterials.designer.cs">
+      <DependentUpon>frmMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmParts.designer.cs">
+      <DependentUpon>frmParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmStages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmStages.designer.cs">
+      <DependentUpon>frmStages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmStyles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Libraries\frmStyles.designer.cs">
+      <DependentUpon>frmStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelFeatures.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelFeatures.designer.cs">
+      <DependentUpon>PanelFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelCut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelCut.designer.cs">
+      <DependentUpon>PanelCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelHead.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelHead.designer.cs">
+      <DependentUpon>PanelHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelLibrary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelLibrary.designer.cs">
+      <DependentUpon>PanelLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelShape.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Panels\PanelShape.designer.cs">
+      <DependentUpon>PanelShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Progress\Progress.cs" />
+    <Compile Include="Controls\Progress\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Progress\ProgressForm.designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrackBar\TrackBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TrackBar\TrackBarEx.Designer.cs">
+      <DependentUpon>TrackBarEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrackBar\TrackBarDrawingHelper.cs" />
+    <Compile Include="Controls\Tutorials\frmRecognizeTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\frmRecognizeTutorial.designer.cs">
+      <DependentUpon>frmRecognizeTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmAccessoryTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmAccessoryTutorial.designer.cs">
+      <DependentUpon>frmAccessoryTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmCutTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmCutTutorial.designer.cs">
+      <DependentUpon>frmCutTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmMaterialTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmMaterialTutorial.designer.cs">
+      <DependentUpon>frmMaterialTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmShapeTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmShapeTutorial.designer.cs">
+      <DependentUpon>frmShapeTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmStageTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmStageTutorial.designer.cs">
+      <DependentUpon>frmStageTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\frmStartTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\frmStartTutorial.designer.cs">
+      <DependentUpon>frmStartTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmStyleTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HairShop\frmStyleTutorial.designer.cs">
+      <DependentUpon>frmStyleTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmCustomHeadsTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmCustomHeadsTutorial.Designer.cs">
+      <DependentUpon>frmCustomHeadsTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmProfileTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmProfileTutorial.Designer.cs">
+      <DependentUpon>frmProfileTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmFreehandTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmFreehandTutorial.Designer.cs">
+      <DependentUpon>frmFreehandTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmMirrorTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmMirrorTutorial.Designer.cs">
+      <DependentUpon>frmMirrorTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmShapedotsTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmShapedotsTutorial.Designer.cs">
+      <DependentUpon>frmShapedotsTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmAutodotsTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Tutorials\HeadShop\frmAutodotsTutorial.Designer.cs">
+      <DependentUpon>frmAutodotsTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\ctrlTemplateImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Render\ctrlTemplateImage.Designer.cs">
+      <DependentUpon>ctrlTemplateImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Collection.cs" />
+    <Compile Include="Helpers\ControlBox.cs" />
+    <Compile Include="Helpers\FaceRecognition.cs" />
+    <Compile Include="Helpers\FolderEx.cs" />
+    <Compile Include="Helpers\FormEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\MRUManager.cs" />
+    <Compile Include="Helpers\Reflector.cs" />
+    <Compile Include="Helpers\StringConverter.cs" />
+    <Compile Include="Helpers\UserControlEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IO\CfgFile.cs" />
+    <Compile Include="IO\Config.cs" />
+    <Compile Include="IO\EchoMessageType.cs" />
+    <Compile Include="IO\FileDialogEx.cs" />
+    <Compile Include="IO\FolderDialogEx.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramCore.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Render\Controllers\AnimationController.cs" />
+    <Compile Include="Render\Controllers\HeadController.cs" />
+    <Compile Include="Render\Controllers\HistoryController.cs" />
+    <Compile Include="Render\Controllers\PickingController.cs" />
+    <Compile Include="Render\Controllers\ShaderController.cs" />
+    <Compile Include="Render\Controllers\ShapeController.cs" />
+    <Compile Include="Render\Controllers\SliceController.cs" />
+    <Compile Include="Render\Controllers\SoundController.cs" />
+    <Compile Include="Render\ctrlRenderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Render\ctrlRenderControl.designer.cs">
+      <DependentUpon>ctrlRenderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\Helpers\BezierCurve.cs" />
+    <Compile Include="Render\Helpers\DrawingTools.cs" />
+    <Compile Include="Render\Helpers\Camera.cs" />
+    <Compile Include="Render\Helpers\ImageEx.cs" />
+    <Compile Include="Render\Helpers\SimpleClass.cs" />
+    <Compile Include="Render\Helpers\Sprite2d.cs" />
+    <Compile Include="Render\Meshes\BaseRenderMesh.cs" />
+    <Compile Include="Render\Meshes\DynamicRenderMesh.cs" />
+    <Compile Include="Render\Obj\ObjExporter.cs" />
+    <Compile Include="Render\Obj\ObjFace.cs" />
+    <Compile Include="Render\Obj\ObjGroup.cs" />
+    <Compile Include="Render\Obj\ObjItem.cs" />
+    <Compile Include="Render\Obj\ObjLoader.cs" />
+    <Compile Include="Render\Obj\ObjMaterial.cs" />
+    <Compile Include="Render\Obj\ObjSaver.cs" />
+    <EmbeddedResource Include="Controls\ctrlAngleSelector.resx">
+      <DependentUpon>ctrlAngleSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlNewPart.resx">
+      <DependentUpon>ctrlNewPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmAbout.resx" />
+    <EmbeddedResource Include="Controls\frmControlBox.resx">
+      <DependentUpon>frmControlBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmNewProject1.resx">
+      <DependentUpon>frmNewProject1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmNewProject2.resx">
+      <DependentUpon>frmNewProject2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Libraries\frmAccessories.resx">
+      <DependentUpon>frmAccessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Libraries\frmFreeHand.resx">
+      <DependentUpon>frmFreeHand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Libraries\frmMaterials.resx">
+      <DependentUpon>frmMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Libraries\frmParts.resx">
+      <DependentUpon>frmParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Libraries\frmStages.resx">
+      <DependentUpon>frmStages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Libraries\frmStyles.resx">
+      <DependentUpon>frmStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Panels\PanelFeatures.resx">
+      <DependentUpon>PanelFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Panels\PanelCut.resx">
+      <DependentUpon>PanelCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Panels\PanelHead.resx">
+      <DependentUpon>PanelHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Panels\PanelShape.resx">
+      <DependentUpon>PanelShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Progress\ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\frmRecognizeTutorial.resx">
+      <DependentUpon>frmRecognizeTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HairShop\frmAccessoryTutorial.resx">
+      <DependentUpon>frmAccessoryTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HairShop\frmCutTutorial.resx">
+      <DependentUpon>frmCutTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HairShop\frmMaterialTutorial.resx">
+      <DependentUpon>frmMaterialTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HairShop\frmShapeTutorial.resx">
+      <DependentUpon>frmShapeTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HairShop\frmStageTutorial.resx">
+      <DependentUpon>frmStageTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\frmStartTutorial.resx">
+      <DependentUpon>frmStartTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HairShop\frmStyleTutorial.resx">
+      <DependentUpon>frmStyleTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HeadShop\frmCustomHeadsTutorial.resx">
+      <DependentUpon>frmCustomHeadsTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HeadShop\frmProfileTutorial.resx">
+      <DependentUpon>frmProfileTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HeadShop\frmFreehandTutorial.resx">
+      <DependentUpon>frmFreehandTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HeadShop\frmMirrorTutorial.resx">
+      <DependentUpon>frmMirrorTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HeadShop\frmShapedotsTutorial.resx">
+      <DependentUpon>frmShapedotsTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Tutorials\HeadShop\frmAutodotsTutorial.resx">
+      <DependentUpon>frmAutodotsTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Render\ctrlRenderControl.resx">
+      <DependentUpon>ctrlRenderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Render\ctrlTemplateImage.resx">
+      <DependentUpon>ctrlTemplateImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuFeaturesNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuFeaturesPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuFrontNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuFrontPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuProfileNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenuProfilePressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgHighMenuHead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnHandNormal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDotsNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDotsPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnToLeftNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnToLeftPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnToRightNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnToRightPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnHandPressed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyArrowNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyArrowPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RH.HeadEditor\RH.HeadEditor.csproj">
+      <Project>{A64716B8-4445-4467-A7FF-EFEB9024C02E}</Project>
+      <Name>RH.HeadEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handBrush1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handBrush2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handBrush3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handBrush4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutRecognize.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutAutodots.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutFreehand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutMirror.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutProfile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutShapedots.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutCustomHeads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Project1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+E:\Projects\Фриланс\HeadShopPro\HeadShop\RH.HeadEditor\obj\Debug\RH.HeadEditor.csprojResolveAssemblyReference.cache
+E:\Projects\Фриланс\HeadShopPro\HeadShop\Debug\RH.HeadEditor.dll
+E:\Projects\Фриланс\HeadShopPro\HeadShop\Debug\RH.HeadEditor.pdb
+E:\Projects\Фриланс\HeadShopPro\HeadShop\RH.HeadEditor\obj\Debug\RH.HeadEditor.dll
+E:\Projects\Фриланс\HeadShopPro\HeadShop\RH.HeadEditor\obj\Debug\RH.HeadEditor.pdb
+C:\elance\github\HeadShop\HeadShop\Debug\RH.HeadEditor.dll
+C:\elance\github\HeadShop\HeadShop\Debug\RH.HeadEditor.pdb
+C:\elance\github\HeadShop\HeadShop\RH.HeadEditor\obj\Debug\RH.HeadEditor.dll
+C:\elance\github\HeadShop\HeadShop\RH.HeadEditor\obj\Debug\RH.HeadEditor.pdb
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\Debug\RH.HeadEditor.dll
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\Debug\RH.HeadEditor.pdb
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\RH.HeadEditor\obj\Debug\RH.HeadEditor.dll
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\RH.HeadEditor\obj\Debug\RH.HeadEditor.pdb

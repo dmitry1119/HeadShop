@@ -1,0 +1,7 @@
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\Debug\FaceShop.exe
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\Debug\FaceShop.pdb
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\RH.FaceShopExecutor\obj\x86\Debug\RH.FaceShopExecutor.Properties.Resources.resources
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\RH.FaceShopExecutor\obj\x86\Debug\RH.FaceShopExecutor.csproj.GenerateResource.Cache
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\RH.FaceShopExecutor\obj\x86\Debug\FaceShop.exe
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\RH.FaceShopExecutor\obj\x86\Debug\FaceShop.pdb
+E:\Projects\Фриланс\HeadShopPro1\HeadShop\HeadShop\RH.FaceShopExecutor\obj\x86\Debug\RH.FaceShopExecutor.csprojResolveAssemblyReference.cache

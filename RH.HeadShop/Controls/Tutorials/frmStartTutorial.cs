@@ -1,0 +1,31 @@
+﻿using System.Diagnostics;
+using System.Windows.Forms;
+using RH.HeadShop.Helpers;
+using RH.HeadShop.IO;
+
+namespace RH.HeadShop.Controls.Tutorials
+{
+    public partial class frmStartTutorial : FormEx
+    {
+        public frmStartTutorial()
+        {
+            InitializeComponent();
+        }
+
+        private void frmStartTutorial_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Hide();
+            e.Cancel = true;            // this cancels the close event.
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://youtu.be/JC5z64YP1xA");
+        }
+
+        private void cbShow_CheckedChanged(object sender, System.EventArgs e)
+        {
+            UserConfig.ByName("Options")["Tutorials", "Start"] = cbShow.Checked ? "0" : "1";
+        }
+    }
+}
